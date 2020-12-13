@@ -1,0 +1,37 @@
+<div class="login-container">
+    <div class="login-form-div">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="logo-div">
+                <div class="logo"></div>
+            </div>
+            <div class="single-item">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                    <mat-hint *ngIf="emailDoesntExist && email.invalid">Email doesn't exist</mat-hint>
+                  </mat-form-field>
+            </div>
+            <div class="single-item">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password">
+                    <mat-hint *ngIf="passwordIncorrect && password.invalid">Password is incorrect</mat-hint>
+                  </mat-form-field>
+            </div>
+            <div class="single-item">
+                <mat-checkbox color="null" class="example-margin">Remember me</mat-checkbox>
+            </div>
+            <div class="single-item">
+                <button class="login-btn" mat-flat-button color="primary" type="submit" [disabled]="this.loginForm.invalid">LOGIN</button>
+            </div>
+            <div class="reg_forgot">
+                <div class="register">
+                    <a routerLink='/register'>Register</a>
+                </div>
+                <div class="forgot">
+                    <a>Forgot</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

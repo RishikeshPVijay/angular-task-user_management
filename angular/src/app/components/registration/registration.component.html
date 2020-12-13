@@ -1,0 +1,72 @@
+<div class="reg-container">
+    <div class="form-div">
+        <form [formGroup]="registrationForm" (ngSubmit)="register()">
+            <div class="logo-div">
+                <div class="logo"></div>
+            </div>
+            <div class="single-items-container">
+                <div class="single-item" id="first-name">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="firstName">
+                        <mat-hint *ngIf="this.registrationForm.get('firstName').invalid && this.registrationForm.get('firstName').touched">First name is not valid</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="single-item" id="last-name">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput formControlName="lastName">
+                        <mat-hint *ngIf="this.registrationForm.get('lastName').invalid && this.registrationForm.get('lastName').touched">Last name is not valid</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="single-item" id="address">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="address">
+                        <mat-hint *ngIf="this.registrationForm.get('address').invalid && this.registrationForm.get('address').touched">Address is not valid</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="single-item" id="phone">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input matInput formControlName="phone">
+                        <mat-hint *ngIf="this.registrationForm.get('phone').invalid && this.registrationForm.get('phone').touched">Phone number is not valid</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="single-item" id="email" (keyup)="keyup()">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email">
+                        <mat-hint *ngIf="emailExists">Email already exists</mat-hint>
+                        <mat-hint *ngIf="this.registrationForm.get('email').invalid && this.registrationForm.get('email').touched && !emailExists">Email address is not valid</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="single-item" id="password">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password">
+                        <mat-hint *ngIf="this.registrationForm.get('password').invalid && this.registrationForm.get('password').touched">Password must be atleast 6 characters long</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="single-item" id="conf-password">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input type="password" matInput formControlName="confPassword">
+                        <mat-hint *ngIf="this.registrationForm.get('confPassword').invalid && this.registrationForm.get('confPassword').touched">Password is not matching</mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="single-item">
+                <button class="reg-btn" mat-flat-button color="primary" [disabled]="this.registrationForm.invalid" type="submit">Register</button>
+            </div>
+            <div class="login_forgot">
+                <div class="login">
+                    <a routerLink='/login'>Login</a>
+                </div>
+                <div class="forgot">
+                    <a>Forgot</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

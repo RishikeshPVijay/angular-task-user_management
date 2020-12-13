@@ -1,0 +1,81 @@
+*
+  box-sizing: border-box
+  
+.user-content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+  border-radius: 10px
+
+
+  .user-table
+    height: 80vh
+    width: 75%
+    overflow-x: auto
+    overflow-y: auto
+    border: none
+    background: rgba(255, 255, 255, 0.568)
+
+  .full-width-table
+    padding: 25px
+    background: none
+    width: 100%
+    height: 80px
+    text-align: center !important
+
+  .mat-header-cell
+    text-align: center !important
+    font-size: 18px 
+    color: #3b3838
+
+  .mat-paginator
+    background: none !important
+
+  .filter-page
+    display: flex
+    flex-direction: row
+    width: 75%
+    justify-content: space-between
+    background: rgba(255, 255, 255, 0.849)
+    padding: 10px 5px 0 5px
+
+    .mat-form-field
+      margin-left: 10px
+      width: 30%
+
+@media screen and ( max-width: 1280px )
+  .filter-page .mat-form-field
+    width: 35%
+
+@media screen and ( max-width: 1080px )
+  .filter-page .mat-form-field
+    width: 50%
+
+@media screen and ( max-width: 768px )
+  .user-table
+    width: 80%
+
+    .filter-page
+      width: 80%
+
+      .mat-form-field
+        width: 50%
+
+    td.mat-cell
+      padding-left: 25px !important
+
+    th.mat-header-cell
+      padding-left: 25px !important
+
+@media screen and ( max-width: 640px )
+  .user-table
+    width: 88%
+    .filter-page
+      flex-direction: column
+      width: 88%
+
+      .mat-form-field
+        width: 95%

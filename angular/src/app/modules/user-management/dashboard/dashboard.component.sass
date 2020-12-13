@@ -1,0 +1,59 @@
+.stats-cards 
+  .mat-card 
+    overflow: hidden
+
+.div
+  position: fixed
+  top: 0
+
+.component-div 
+  box-sizing: border-box
+  position: relative
+  overflow-x: hidden
+  overflow-y: hidden
+  height: 100vh
+  width: 100%
+  padding-top: 63px 
+
+.router-pad
+  position: relative
+  overflow: hidden
+  height: 100%
+  padding: 20px 20px
+
+.mat-nav-content
+  padding: 0
+  margin: 0
+
+// :host 
+//   display: flex
+//   flex-direction: column
+//   height: 100%
+
+mat-nav 
+  width: 280px
+  position: fixed
+
+mat-nav-container 
+  height: 100%
+
+mat-nav-content 
+  padding: 20px
+
+mat-sidenav
+  width: 260px
+
+@media screen and ( max-width: 856px )
+  .component-div
+    // visibility: hidden
+  mat-nav 
+    width: 200px
+
+  .router-pad
+    padding: 20px 0
+
+@media screen and ( max-width: 710px )
+  .component-div
+    // visibility: hidden
+  mat-nav 
+    width: 280px

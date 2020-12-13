@@ -1,0 +1,18 @@
+<app-header (toggleSideBarForMe)="sideBarToggler($event)" (logoutClick)="logout()"></app-header>
+<mat-sidenav mode="side" [opened]="sideBarOpen" [fixedInViewport]="fixed" [fixedTopGap]="fixedTopGap"
+    [fixedBottomGap]="fixedBottomGap">
+    <app-sidebar (toggleSideBarForMe)="sideBarToggler($event)" (logoutClick)="logout()"></app-sidebar>
+</mat-sidenav>
+<mat-sidenav-container>
+    <mat-sidenav-content (click)="hideSide()">
+        <div class="component-div">
+            <div class="router-pad">
+                <router-outlet (clickOutsideSide)="hideSide()"></router-outlet>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div class="div">
+
+</div>

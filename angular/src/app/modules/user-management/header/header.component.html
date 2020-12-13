@@ -1,0 +1,34 @@
+<div class="header">
+
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <button class="header-btn" mat-icon-button (click)="toggleSideBar()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <span> <img src="/assets/logo.png" alt="logo"> </span>
+
+            <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+                <ul fxLayout="row" fxLayoutGap="20px">
+                    <li>
+                        <button class="header-btn" mat-icon-button>
+                            <mat-icon>settings</mat-icon>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="header-btn" mat-button [matMenuTriggerFor]="menu">
+                            <mat-icon>person_outline</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button class="header-btn" mat-menu-item  (click)="logout()">
+                                <mat-icon>exit_to_app</mat-icon>
+                                <span class="text">Logout</span>
+                            </button>
+                        </mat-menu>
+
+                    </li>
+                </ul>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
