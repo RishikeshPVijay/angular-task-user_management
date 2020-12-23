@@ -4,7 +4,7 @@ $logo: url('/assets/logo.png')
 $buttonColor: #5aafe6
 
 .login-container
-    height: 100vh
+    min-height: 100vh
     display: flex
     justify-content: center
     align-items: center
@@ -106,15 +106,15 @@ $buttonColor: #5aafe6
 @media screen and ( max-width: 1120px )
     .login-container
         padding: 30px 0 30px 0
-        height: auto
         .login-form-div
-            width: 45%
+            width: 60%
 
 @media screen and ( max-width: 768px )
     .login-container
         .login-form-div
-            width: 75%
+            width: 80%
 
 @media screen and ( max-width: 480px )
     .login-container
-        height: 80vh
+        .login-form-div
+            width: 92%

@@ -3,11 +3,11 @@
 
         <h2 matSubheader>Pages</h2>
     
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard" (click)="toggleSideBar()">Dashboard</a>
         <a *ngIf="isAdmin" mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard/admin/all-users" (click)="toggleSideBar()">Users List</a>
         <a *ngIf="isAdmin" mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard/admin/user-requests" (click)="toggleSideBar()">User Requests</a>
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard" (click)="toggleSideBar()">Dummy</a>
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard" (click)="toggleSideBar()">Dummy</a>
-    
+        
         <mat-divider></mat-divider>
 
         <button class="header-btn" mat-menu-item  (click)="logout()" (click)="toggleSideBar()">
