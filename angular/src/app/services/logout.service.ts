@@ -18,7 +18,7 @@ export class LogoutService {
 
   logout() {
     let url = environment.app_url + '/logout';
-    return this.http.get(url, { withCredentials: true }).subscribe(
+    return this.http.post(url, {}, { withCredentials: true }).subscribe(
       res => {
         
         if (res['logout']) {

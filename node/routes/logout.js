@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-router.get('/logout', (req, res) => {
+router.post('/logout', (req, res) => {
     req.logout();
     res.clearCookie('user_sid');
     res.json({logout: true});
