@@ -12,7 +12,7 @@ router.post('/', jsonParser, changer, validationRules(), validate, reChanger, (r
         if (user) return res.json({ register: false, userExists: true });
 
         if (!user) {
-            let adminEmail = 'admin@admin.com';
+            let adminEmail = process.env.ADMIN_EMAIL;
             let newUser = new User({
                 email: req.body.email,
                 password: req.body.password,
