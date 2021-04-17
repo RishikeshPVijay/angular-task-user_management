@@ -1,9 +1,9 @@
 module.exports = {
     mongodb: {
-        dbURI: 'mongodb://127.0.0.1/task',
+        dbURI: process.env.DB_URI,
         options: {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true}
     },
     session: {
-        cookieKey: 'onewsfoidtersdf'
+        cookieKey: process.env.COOKIE_KEY
     }
 };
